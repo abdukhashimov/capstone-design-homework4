@@ -4,6 +4,7 @@ This script manually inserts the rectangles to the people and moon.
 ID: U1610131
 Name: Madiyor Abdukhashimov
 """
+
 import cv2
 
 
@@ -32,4 +33,4 @@ cv2.imshow('people_and_moon_selected', people_and_moon)
 # wait 5 seconds
 cv2.waitKey(5000)
 # save the file
-cv2.imwrite('results/people_and_moon_selected.jpeg', people_and_moon)
+cv2.imwrite('results/task1/people_and_moon_selected.jpeg', people_and_moon)
