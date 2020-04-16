@@ -10,7 +10,7 @@ This repo contains 4 tasks of CD homework and their solutions.
 
 ## Installation
 
-Use the package manager [pip](https://pypi.org/project/opencv-python/) to install depenencies.
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install depenencies.
 
 ```bash
 pip install opencv-python
