@@ -1,4 +1,4 @@
-"""Assignment 4 and task 1
+"""Assignment 4 and task 2
 
 This script manually separates moonphcamera.jpg image into two different images
 
