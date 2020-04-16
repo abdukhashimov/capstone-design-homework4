@@ -57,5 +57,8 @@ pip install -r requirements.txt
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 
+## GitHub Project Link
+[github repository](https://github.com/abdukhashimov/capstone-design-homework4)
+
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
