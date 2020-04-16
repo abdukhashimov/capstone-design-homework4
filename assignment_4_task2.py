@@ -1,6 +1,7 @@
 """Assignment 4 and task 1
 
-This script manually inserts the rectangles to the people and moon.
+This script manually separates moonphcamera.jpg image into two different images
+
 ID: U1610131
 Name: Madiyor Abdukhashimov
 """
