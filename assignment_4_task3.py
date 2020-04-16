@@ -1,6 +1,6 @@
 """Assignment 4 and task 3
 
-First decrease the size of an image then create blurred and sharpen 
+First decrease the size of an image then create blurred and sharpen
 images from flower.jpg image. Save resulted images.
 
 ID: U1610131
