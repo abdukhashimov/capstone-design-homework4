@@ -9,7 +9,6 @@ Name: Madiyor Abdukhashimov
 
 
 import cv2
-# importing numpy as np - which helps to generate matrices
 import numpy as np
 
 # defining kernel for bluring image

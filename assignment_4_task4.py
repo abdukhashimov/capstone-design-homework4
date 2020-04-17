@@ -6,12 +6,9 @@ the brightness of the dark.jpg image. Save resulted images
 ID: U1610131
 Name: Madiyor Abdukhashimov
 """
-# importing opencv library - to be able to import opencv you need to install
-# it using pip. The process of installation is provided in [README.md](../README.md)
 import cv2
 import numpy as np
 
-# the value of brightness, which is in the range of 0 to 100
 value = 80    # brightness control in range [0 - 100]
 
 # we are reading the image from the `images` directory
@@ -23,12 +20,8 @@ h, w, d = image.shape
 # just resizing it to the half
 resized_image = cv2.resize(image, (int(w/2), int(h/2)))
 
-# converting the image to the grey color
 grey = cv2.cvtColor(resized_image, cv2.COLOR_BGR2GRAY)
-
-# equalizing the grey scale image color distribution
 grey_equalized_image = cv2.equalizeHist(grey)
-# we are substracing the grey matrix elements from 255 and making them 100, 255, and adding the birghtness
 bright_image = np.where((255 - grey) < 100, 255, grey + value)
 
 # saving
