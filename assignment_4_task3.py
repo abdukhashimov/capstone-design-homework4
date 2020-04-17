@@ -7,24 +7,39 @@ ID: U1610131
 Name: Madiyor Abdukhashimov
 """
 
+# importing opencv library - to be able to import opencv you need to install
+# it using pip. The process of installation is provided in [README.md](../README.md)
 import cv2
+# importing numpy as np - which helps to generate matrices
 import numpy as np
 
+# defining kernel for bluring image
 kernel_size = 5
 kernel = np.ones((kernel_size, kernel_size), np.float32) / \
     (kernel_size*kernel_size)
+# end of kernel for bluring image
 
+# defining kernel for sharpening
 kernel_sharpen = np.array([
     [-1, -1, -1, ],
     [-1, 9, -1],
     [-1, -1, -1]
 ])
 
+
+# read the image from the `images/ directory`
 image = cv2.imread('images/flower.jpg')
+
+# getting the dimensions of the image horizonta, width, and dimension
 h, w, d = image.shape
+
+# resizing the image
 resized_image = cv2.resize(image, (int(w/4), int(h/4)))
 
+# bluring the image using filtering
 blured_image = cv2.filter2D(resized_image, -1, kernel)
+
+# end of sharpening the image
 sharpened_image = cv2.filter2D(resized_image, -1, kernel_sharpen)
 
 
