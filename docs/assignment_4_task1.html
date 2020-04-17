@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <title>assignment_4_task1.py</title>
+  <link rel="stylesheet" href="pycco.css">
+</head>
+<body>
+<div id='container'>
+  <div id="background"></div>
+  <div class='section'>
+    <div class='docs'><h1>assignment_4_task1.py</h1></div>
+  </div>
+  <div class='clearall'>
+  <div class='section' id='section-0'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-0'>#</a>
+      </div>
+      <p>Assignment 4 and task 1</p>
+<p>This script manually inserts the rectangles to the people and moon.
+ID: U1610131
+Name: Madiyor Abdukhashimov</p>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span></span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-1'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-1'>#</a>
+      </div>
+      <p>importing opencv library - to be able to import opencv you need to install
+it using pip. The process of installation is provided in <a href="../README.md">README.md</a></p>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="kn">import</span> <span class="nn">cv2</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-2'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-2'>#</a>
+      </div>
+      <p>read the image from the <code>images/ directory</code></p>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="n">image</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s1">&#39;images/moonphcamera.jpg&#39;</span><span class="p">)</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-3'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-3'>#</a>
+      </div>
+      <p>place the red rectangle onto people.</p>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="n">people_and_moon</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">rectangle</span><span class="p">(</span>
+    <span class="n">img</span><span class="o">=</span><span class="n">image</span><span class="p">,</span>  <span class="c1"># the image that we have loaded</span>
+    <span class="n">pt1</span><span class="o">=</span><span class="p">(</span><span class="mi">72</span><span class="p">,</span> <span class="mi">80</span><span class="p">),</span>  <span class="c1"># starting point for rectangle</span>
+    <span class="n">pt2</span><span class="o">=</span><span class="p">(</span><span class="mi">208</span><span class="p">,</span> <span class="mi">307</span><span class="p">),</span>  <span class="c1"># ending point for rectangle</span>
+    <span class="n">color</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">),</span>  <span class="c1"># the red color that we are sending</span>
+    <span class="n">thickness</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>  <span class="c1"># the size for the line of rectangle</span>
+<span class="p">)</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-4'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-4'>#</a>
+      </div>
+      <p>place the rectangle onto the Moon</p>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="n">people_and_moon</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">rectangle</span><span class="p">(</span>
+    <span class="n">img</span><span class="o">=</span><span class="n">people_and_moon</span><span class="p">,</span>  <span class="c1"># the image that has moon and people</span>
+    <span class="n">pt1</span><span class="o">=</span><span class="p">(</span><span class="mi">392</span><span class="p">,</span> <span class="mi">126</span><span class="p">),</span>  <span class="c1"># the starting point for rectangle</span>
+    <span class="n">pt2</span><span class="o">=</span><span class="p">(</span><span class="mi">432</span><span class="p">,</span> <span class="mi">160</span><span class="p">),</span>  <span class="c1"># the ending poin for rectangle</span>
+    <span class="n">color</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>  <span class="c1"># the color of rectangle</span>
+    <span class="n">thickness</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>  <span class="c1"># the size for the line of rectangle</span>
+<span class="p">)</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-5'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-5'>#</a>
+      </div>
+      <p>display the image</p>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="n">cv2</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="s1">&#39;people_and_moon_selected&#39;</span><span class="p">,</span> <span class="n">people_and_moon</span><span class="p">)</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-6'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-6'>#</a>
+      </div>
+      <p>save the file</p>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="n">cv2</span><span class="o">.</span><span class="n">imwrite</span><span class="p">(</span><span class="s1">&#39;results/task1/people_and_moon_selected.jpeg&#39;</span><span class="p">,</span> <span class="n">people_and_moon</span><span class="p">)</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-7'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-7'>#</a>
+      </div>
+      <p>wait 5 seconds</p>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="n">cv2</span><span class="o">.</span><span class="n">waitKey</span><span class="p">(</span><span class="mi">5000</span><span class="p">)</span>
+
+</pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+</div>
+</body>
